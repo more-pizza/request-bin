@@ -1,0 +1,13 @@
+# system files
+.DS_Store
+
+# environment
+.env
+.env.local
+
+# dependencies
+node_modules/
+
+# builds
+dist/
+
