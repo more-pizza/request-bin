@@ -5,3 +5,7 @@
 ### Minor Changes
 
 - 0962cc0: Initial versions
+
+### Patch Changes
+
+- Updated workflows to try and get working
