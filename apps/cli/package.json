@@ -4,13 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsup src/index.ts --format cjs --dts",
-    "change": "beachball change",
-    "check": "beachball check",
-    "release": "beachball publish"
+    "build": "tsup src/index.ts --format cjs --dts"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Daniel Hayes",
+  "license": "MIT",
   "dependencies": {
     "@rushstack/ts-command-line": "^4.15.1"
   },
