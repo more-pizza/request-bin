@@ -1,7 +1,8 @@
 import { CommandLineParser } from '@rushstack/ts-command-line';
 
+import { AddPresetAction } from './actions/AddPresetAction';
+import { AddRemoteAction } from './actions/AddRemoteAction';
 import { ConfigAction } from './actions/ConfigAction';
-import { SetDefaultProfileAction } from './actions/SetDefaultProfileAction';
 
 export class RequestBinCli extends CommandLineParser {
   public constructor() {
@@ -10,7 +11,8 @@ export class RequestBinCli extends CommandLineParser {
       toolDescription: 'Tool for interacting with a request bin',
     });
 
+    this.addAction(new AddPresetAction());
+    this.addAction(new AddRemoteAction());
     this.addAction(new ConfigAction());
-    this.addAction(new SetDefaultProfileAction());
   }
 }

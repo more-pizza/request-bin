@@ -15,6 +15,7 @@
     "turbo": "^1.10.3"
   },
   "scripts": {
+    "cli": "./apps/cli/bin/request-bin",
     "start": "cd apps/server && npm run start",
     "build": "turbo build",
     "change": "npx changeset",

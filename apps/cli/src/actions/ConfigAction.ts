@@ -1,5 +1,6 @@
-import { CommandLineAction, CommandLineStringParameter } from '@rushstack/ts-command-line';
-import { getSettings } from '../utils/settings';
+import { CommandLineAction } from '@rushstack/ts-command-line';
+
+import { Settings } from '../lib/Settings';
 
 export class ConfigAction extends CommandLineAction {
   public constructor() {
@@ -11,7 +12,9 @@ export class ConfigAction extends CommandLineAction {
   }
 
   protected async onExecute(): Promise<void> {
-    const settings = await getSettings();
-    console.log(settings);
+    const settings = new Settings();
+    const result = await settings.load();
+    console.log('=== Settings ===');
+    console.log(JSON.stringify(result, null, 2));
   }
 }
